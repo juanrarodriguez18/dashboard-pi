@@ -66,7 +66,7 @@ app.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
-app.get('/', function (req, res) {
+app.get('/', passport.authenticationMiddleware(), function (req, res) {
   res.render("dashboard")
 });
 

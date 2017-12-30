@@ -1,7 +1,10 @@
 body {
-    padding-top: 40px;
-    padding-bottom: 40px;
     background-color: #eee;
+    background: url("../images/sliderbg_01.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   
   .form-signin {
@@ -26,14 +29,10 @@ body {
     z-index: 2;
   }
   .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    margin-bottom: 10px;
   }
   .form-signin input[type="password"] {
     margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
   }
 
   .vertical-center {
@@ -51,5 +50,11 @@ body {
   display: block;
   width: 100%;
   margin-top: 5%;
+}
+
+form {
+  background-color: rgba(255,255,255, 0.5);
+  color: inherit;
+  border-radius: 10px;
 }
   
