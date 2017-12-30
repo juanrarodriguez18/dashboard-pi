@@ -1,0 +1,23 @@
+{
+  "name": "dashboard-pi",
+  "version": "1.0.0",
+  "description": "A simple Dashboard Page for Pi Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanrarodriguez18/dashboard-pi.git"
+  },
+  "author": "juanrarodriguez18",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/juanrarodriguez18/dashboard-pi/issues"
+  },
+  "homepage": "https://github.com/juanrarodriguez18/dashboard-pi#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
