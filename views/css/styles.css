@@ -1,12 +1,12 @@
 body {
-    background-color: #eee;
-    background: url("../images/sliderbg_01.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Lato', sans-serif;
-  }
+  background-color: #eee;
+  background: url("../images/sliderbg_01.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+}
 
 h1 {
   text-shadow: 1px 1px rgba(200, 200, 200, 0.5);
@@ -16,7 +16,7 @@ h1, h2{
   color: rgba(30, 30, 30, 0.7);
   font-family: 'Raleway', sans-serif;
 }
-  
+
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -38,25 +38,28 @@ h1, h2{
   padding: 10px;
   font-size: 16px;
 }
-  .form-signin .form-control:focus {
-    z-index: 2;
-  }
-  .form-signin input[type="email"] {
-    margin-bottom: 10px;
-  }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-  }
 
-  .vertical-center {
-    position: absolute;
-    top: 40%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 10px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
 
 .validation{
-    color: red;
+  color: red;
 }
 
 .btn-block {
@@ -70,4 +73,3 @@ form {
   color: inherit;
   border-radius: 10px;
 }
-  
