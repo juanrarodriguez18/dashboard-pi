@@ -10,20 +10,26 @@ html(lang='en')
     link(href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css', rel='stylesheet')
     link(href='css/styles.css', rel='stylesheet')
   body
-    h1.text-center Congratulations! You are now logged
+    h1.text-center.dashboard-title Welcome to your Pi Dashboard!
     .container.dashboard-icons.vertical-center
       .row.align-items-center
         .col
           a.owncloudx(href='#')
-            img.img-fluid(src='images/owncloudx.png', alt='OwncloudX')
+            img.img-fluid(src='images/owncloudx.png', alt='OwncloudX', title='Go to Owncloud X')
         .col
           a.pi-hole(href='#')
-            img.img-fluid(src='images/pi-hole.jpg', alt='Pi-Hole')
+            img.img-fluid(src='images/pi-hole.jpg', alt='Pi-Hole', title='Go to Pi-Hole')
+        .col
+          a.monitor(href='/monitor')
+            img.img-fluid(src='images/monitor.png', alt='Monitor', title='Go to Pi Monitor')
       .row.align-items-center
         .col
           a.transmission(href='#')
-            img.img-fluid(src='images/transmission.png', alt='Transmission')
+            img.img-fluid(src='images/transmission.png', alt='Transmission', title='Go to Transmission')
         .col
           a.plex(href='#')
-            img.img-fluid(src='images/plex.jpg', alt='Plex')
+            img.img-fluid(src='images/plex.jpg', alt='Plex', title='Go to Plex')
+        .col
+          a.logout(href='/logout')
+            img.img-fluid(src='images/logout.png', alt='Logout', title='Logout')
     // /container

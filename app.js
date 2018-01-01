@@ -7,7 +7,9 @@ const express = require('express');
 const passport = require('passport');  
 const session = require('express-session'); 
 const connect = require('connect');
+const fs = require('fs');
 var LocalStrategy = require('passport-local').Strategy;
+const monitor = require('./monitor.js');
 const app = express();
 
 // all environments
@@ -74,9 +76,24 @@ app.get('/login', function (req, res) {
     res.render("login");
   });
 
-http.createServer(app).listen(app.get('port'), function(){
+app.get('/monitor', passport.authenticationMiddleware(), function (req, res) {
+    fs.readFile(__dirname+'/index.html', function(err, data) {
+		if (err) {
+      //Si hay error, mandaremos un mensaje de error 500
+			console.log(err);
+			res.writeHead(500);
+			return res.end('Error loading index.html');
+		}
+		res.writeHead(200);
+		res.end(data);
+	});
+});
+
+appHttpServer = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+monitor.initMonitor(appHttpServer);
 
 /*app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
