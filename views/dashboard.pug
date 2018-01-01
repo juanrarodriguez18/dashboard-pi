@@ -5,11 +5,25 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Login Page
+    title Dashboard Page
     // Bootstrap core CSS
     link(href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css', rel='stylesheet')
-    link(href='styles/styles.css', rel='stylesheet')
+    link(href='css/styles.css', rel='stylesheet')
   body
-    .container.vertical-center
-      h1.text-center Congratulations! You are now logged
+    h1.text-center Congratulations! You are now logged
+    .container.dashboard-icons.vertical-center
+      .row.align-items-center
+        .col
+          a.owncloudx(href='#')
+            img.img-fluid(src='images/owncloudx.png', alt='OwncloudX')
+        .col
+          a.pi-hole(href='#')
+            img.img-fluid(src='images/pi-hole.jpg', alt='Pi-Hole')
+      .row.align-items-center
+        .col
+          a.transmission(href='#')
+            img.img-fluid(src='images/transmission.png', alt='Transmission')
+        .col
+          a.plex(href='#')
+            img.img-fluid(src='images/plex.jpg', alt='Plex')
     // /container
