@@ -7,7 +7,7 @@ const md5 = require('md5')
 
 function findUser (username, callback) {
 
-  const user = {"id": 1, "username": "username@test.com", "password": "password"};
+  const user = {"id": 1, "username": process.env.USERNAME, "password": process.env.PASSWORD};
 
   if (username === user.username) {
     return callback(null, user)

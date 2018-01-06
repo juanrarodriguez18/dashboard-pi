@@ -58,7 +58,7 @@ app.post('/login', function(req, res, next) {
     if (!user) {
       // *** Display message using Express 3 locals
       console.log("No user")
-      return res.render('login', {loginMessage: 'Username or password incorrect'});
+      return res.render('login', {loginMessage: 'Nombre de usuario o contraseña incorrectos', domain: process.env.DOMAIN});
     }
     req.logIn(user, function(err) {
       if (err) { console.log(err); return next(err); }
@@ -69,7 +69,8 @@ app.post('/login', function(req, res, next) {
 });
 
 app.get('/', passport.authenticationMiddleware(), function (req, res) {
-  res.render("dashboard")
+  res.render("dashboard", {domain: process.env.DOMAIN, owncloudx_url: process.env.OWNCLOUDX_URL, pihole_url: process.env.PIHOLE_URL,
+                           transmission_url: process.env.TRANSMISSION_URL, plex_url: process.env.PLEX_URL})
 });
 
 app.get('/login', function (req, res) {
