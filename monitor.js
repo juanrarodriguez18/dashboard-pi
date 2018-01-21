@@ -125,7 +125,7 @@ module.exports = {
         });}, 5000);
 
         setInterval(function(){
-        child = exec("top -d 0.5 -b -n2 | grep 'Cpu(s)'|tail -n 1 | awk '{print $2 + $4}'", function (error, stdout, stderr) {
+        child = exec("top -d 0,5 -b -n2 | grep 'Cpu(s)'|tail -n 1 | awk '{print $2 + $4}'", function (error, stdout, stderr) {
             if (error !== null) {
                     console.log('exec error: ' + error);
                 } else {
