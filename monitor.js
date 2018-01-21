@@ -59,7 +59,7 @@ module.exports = {
             }
             });
 
-            child = exec("top -d 0.5 -b -n2 | tail -n 10 | awk '{print $12}'", function (error, stdout, stderr) {
+            child = exec("top -d 0,5 -b -n2 | tail -n 10 | awk '{print $12}'", function (error, stdout, stderr) {
                 if (error !== null) {
                     console.log('exec error: ' + error);
                 } else {
@@ -110,6 +110,19 @@ module.exports = {
                 sendData = 1;
             }
         }, 5000);
+        
+        // Function for checking disk usage
+        setInterval(function(){
+            child = exec("df -Bm | grep '/dev/root' | tail -n 1 | awk '{print $2,$5}'", function (error, stdout, stderr) {
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            } else {
+                var total = parseInt(stdout.split(" ")[0])
+                var used = parseInt(stdout.split(" ")[1])
+                var free = 100-used;
+                socket.emit('diskUsageUpdate', total, used, free); 
+            }
+        });}, 5000);
 
         // Function for measuring temperature
         setInterval(function(){
